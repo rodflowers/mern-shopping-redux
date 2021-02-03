@@ -10,7 +10,7 @@ exports.getAllProducts = asyncHandler(async (req, res, next) => {
 });
 
 exports.getProduct = asyncHandler(async (req, res, next) => {
-  console.log("GET PRODUCT => ");
+  console.log("GET PRODUCT CONTROLLER => ");
   const product = await Product.findById(req.params.id);
   if (!product) {
     return next(
