@@ -8,9 +8,9 @@ const productRoutes = require("./routes/productRoutes");
 connectDB();
 
 const app = express();
-app.use(express.json);
+app.use(express.json());
 
-app.use("api/v1/product", productRoutes);
+app.use("/api/v1/product", productRoutes);
 
 const PORT = process.env.PORT;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`.cyan.bold));
